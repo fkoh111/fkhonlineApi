@@ -1,0 +1,6 @@
+Flask==1.1.1
+Werkzeug==0.16.0
+flask_restx==0.1.1
+Flask-Cors==3.0.8
+python-dotenv==0.13.0
+yagmail==0.11.224
