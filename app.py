@@ -12,6 +12,7 @@ api = Api(
     contact_url="fkoh111.org",
     description="Flask API for fkhonline.net",
     prefix="/api",
+    doc=False,
 )
 api.init_app(app)
 
