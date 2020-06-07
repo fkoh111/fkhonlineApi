@@ -2,7 +2,6 @@ from flask import Flask
 from flask_restx import Api
 from apis.contact import api as contact
 
-
 app = Flask(__name__)
 app.config.from_pyfile("config.cfg")
 api = Api(
@@ -11,7 +10,6 @@ api = Api(
     contact="fkoh111",
     contact_url="fkoh111.org",
     description="Flask API for fkhonline.net",
-    prefix="/api",
     doc=False,
 )
 api.init_app(app)
