@@ -39,7 +39,7 @@ jobs:
 
       - name: Test with pytest
         run: |
-          pytest
+          pytest tests/
 
       - name: Build using AppService-Build
         uses: azure/appservice-build@v1
