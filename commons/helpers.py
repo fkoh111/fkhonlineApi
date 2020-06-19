@@ -14,6 +14,5 @@ class MailConfig:
 
 def set_subject(name, mail):
     """Formatting a subject header"""
-
     subject = f"FKHONLINE | From: {name} | {mail}"
     return subject
