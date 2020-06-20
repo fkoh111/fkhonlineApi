@@ -2,6 +2,7 @@ from flask_restx import Resource
 from commons.helpers import MailConfig, set_subject
 from .models import api, schema
 import yagmail
+from datetime import datetime as dt
 
 
 @api.route("/form")
@@ -21,3 +22,11 @@ class Contact(Resource):
             return {"status": "success"}, 201
         except:
             return {"status": "error"}, 500
+
+
+@api.route("/alive")
+class Alive(Resource):
+    def get(self):
+        """Verify that service is alive."""
+        timestamp = dt.now().strftime("%Y-%B-%d %H:%M:%S.%f")
+        return {"status": "ok", "timestamp": timestamp}, 200
